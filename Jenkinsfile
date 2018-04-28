@@ -5,7 +5,7 @@ node('linux') {
     sh "ant -buildfile test.xml"
   }
   stage ("Build") {
-    sh "env"
+    sh "ant -f build.xml -v"
   }
   stage ("Deploy") {
     sh "env"
