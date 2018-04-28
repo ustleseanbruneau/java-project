@@ -8,7 +8,7 @@ node('linux') {
     sh "ant -f build.xml -v"
   }
   stage ("Deploy") {
-    sh "env"
+    sh "aws s3 cp ./rectangle-${BUILD_NUMBER} s3://ustleseanbruneau-seis665-asgn10"
   }
   stage ("Report") {
     sh "env"
